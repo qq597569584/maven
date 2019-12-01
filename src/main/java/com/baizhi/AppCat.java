@@ -12,6 +12,8 @@ public class AppCat {
 
         SpringApplication.run(AppCat.class, args);
         System.out.println("--------------");
+        System.out.println("来啊快活啊");
+        
     }
 
 }
