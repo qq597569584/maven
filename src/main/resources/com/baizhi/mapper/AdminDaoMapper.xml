@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.AdminDao">
+    <select id="selectByUsernameAndPassword" resultType="Admin">
+        select * from admin where username=#{username} and password=#{password}
+    </select>
+    <insert id="insert">
+        insert into admin (username,password,zname,sex) values(#{username},#{password},#{zname},#{sex})
+    </insert>
+</mapper>

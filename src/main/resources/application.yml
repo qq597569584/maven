@@ -1,0 +1,29 @@
+server:
+  port: 8989
+  context-path: /springboot
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/ems
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  aop:
+    proxy-target-class: true
+mybatis:
+  type-aliases-package: com.baizhi.entity
+  mapper-locations: com/baizhi/mapper/*Mapper.xml
+logging:
+  level:
+    root: info
+    com.baizhi.dao: debug
+    com.baizhi.service: debug
+  pattern:
+    console: "%d{yyy MMM dd HH:mm:ss,SSS}:[%p]:%l%m%n"

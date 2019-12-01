@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.DepartmentDao">
+    <select id="selectAll" resultType="Department">
+        select * from department
+    </select>
+    <insert id="insert">
+        insert into department (sid,name) values(#{sid},#{name})
+    </insert>
+    <delete id="delete">
+        delete from department where id=#{id}
+    </delete>
+    <update id="update">
+        update department set sid=#{sid},name=#{name} where id=#{id}
+    </update>
+    <select id="selectOne" resultType="Department">
+        select * from department where id=#{id}
+    </select>
+</mapper>
