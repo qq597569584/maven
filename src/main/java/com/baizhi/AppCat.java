@@ -9,6 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AppCat {
     public static void main(String[] args) {
+
         SpringApplication.run(AppCat.class, args);
+        System.out.println("--------------");
     }
+
 }
